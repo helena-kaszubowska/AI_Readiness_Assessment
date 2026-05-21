@@ -1,10 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { IconDownload, IconRotate } from "./icons";
-import { PdfReportTemplate } from "./PdfReportTemplate";
 import { AI_USAGE_OPTIONS, COMPANY_SIZE_OPTIONS } from "../data/questions";
 import { formatAiGoalDisplay } from "../utils/introDisplay";
 import type { AssessmentScores, IntroData } from "../types";
-import { generatePdfFromElement } from "../utils/generatePdf";
 import { RecommendationsList } from "./RecommendationsList";
 import { ResultsChart } from "./ResultsChart";
 import { ScoreCard } from "./ScoreCard";
@@ -40,15 +38,14 @@ export function ResultsScreen({
   recommendations,
   onRestart,
 }: ResultsScreenProps) {
-  const pdfRef = useRef<HTMLDivElement>(null);
   const [pdfBusy, setPdfBusy] = useState(false);
 
   const handlePdf = async () => {
-    const el = pdfRef.current;
-    if (!el || pdfBusy) return;
+    if (pdfBusy) return;
     setPdfBusy(true);
     try {
-      await generatePdfFromElement(el);
+      const { downloadReportPdf } = await import("../utils/downloadReportPdf");
+      await downloadReportPdf({ intro, scores, recommendations });
     } catch (e) {
       console.error(e);
       window.alert("Nie udało się wygenerować PDF. Spróbuj ponownie.");
@@ -59,12 +56,6 @@ export function ResultsScreen({
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:py-12">
-      <PdfReportTemplate
-        ref={pdfRef}
-        intro={intro}
-        scores={scores}
-        recommendations={recommendations}
-      />
       <header className="text-center">
         <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem]">
           <span className="text-gradient-brand">Wyniki oceny gotowości</span>

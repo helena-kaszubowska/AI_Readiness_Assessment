@@ -1,7 +1,7 @@
-import { IconBrain, IconChevronRight } from './icons'
+import { IconBrain, IconChevronRight } from "./icons";
 
 interface StartScreenProps {
-  onStart: () => void
+  onStart: () => void;
 }
 
 export function StartScreen({ onStart }: StartScreenProps) {
@@ -16,14 +16,18 @@ export function StartScreen({ onStart }: StartScreenProps) {
         </h1>
         <p className="mt-4 shrink-0 text-sm leading-relaxed text-slate-800 sm:mt-5 sm:text-base">
           Narzędzie umożliwia wstępną samoocenę gotowości przedsiębiorstwa do
-          wdrożenia rozwiązań sztucznej inteligencji na podstawie wymiarów
-          technologicznych, organizacyjnych, środowiskowych oraz procesowych.
+          wdrożenia rozwiązań sztucznej inteligencji na podstawie wymiarów:
+          technologicznego, organizacyjnego, środowiskowego oraz procesowego.
         </p>
-        <button type="button" onClick={onStart} className="btn-primary-lg mx-auto mt-6 shrink-0 sm:mt-8">
+        <button
+          type="button"
+          onClick={onStart}
+          className="btn-primary-lg mx-auto mt-6 shrink-0 sm:mt-8"
+        >
           Rozpocznij ocenę
           <IconChevronRight />
         </button>
       </div>
     </div>
-  )
+  );
 }

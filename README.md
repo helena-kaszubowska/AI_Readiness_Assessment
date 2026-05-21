@@ -24,7 +24,8 @@ npm run preview
 - `src/types.ts` — typy TypeScript
 - `src/utils/scoring.ts` — obliczanie wyników
 - `src/utils/recommendations.ts` — reguły rekomendacji
-- `src/utils/generatePdf.ts` — generowanie raportu PDF (jsPDF)
+- `src/components/PdfReportDocument.tsx` — szablon raportu PDF (@react-pdf/renderer)
+- `src/utils/downloadReportPdf.tsx` — pobieranie raportu PDF w przeglądarce
 - `src/components/` — komponenty UI
 
 ## Funkcje
