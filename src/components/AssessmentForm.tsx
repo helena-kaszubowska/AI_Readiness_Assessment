@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { IconChevronLeft, IconChevronRight } from './icons'
+import { IconChevronLeft, IconChevronRight } from './Icons'
 import { FORM_STEPS } from '../data/questions'
 import type { AnswerValue, AssessmentState, IntroData } from '../types'
 import { validateIntro, validateQuestions } from '../utils/validation'

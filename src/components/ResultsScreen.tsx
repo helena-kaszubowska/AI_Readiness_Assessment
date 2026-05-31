@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconDownload, IconRotate } from "./icons";
+import { IconDownload, IconRotate } from "./Icons";
 import { AI_USAGE_OPTIONS, COMPANY_SIZE_OPTIONS } from "../data/questions";
 import { formatAiGoalDisplay } from "../utils/introDisplay";
 import type { AssessmentScores, IntroData } from "../types";

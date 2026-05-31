@@ -1,4 +1,4 @@
-import { IconBrain, IconChevronRight } from "./icons";
+import { IconBrain, IconChevronRight } from "./Icons";
 
 interface StartScreenProps {
   onStart: () => void;
@@ -15,7 +15,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
           Ocena gotowości przedsiębiorstwa do wdrożenia AI
         </h1>
         <p className="mt-4 shrink-0 text-sm leading-relaxed text-slate-800 sm:mt-5 sm:text-base">
-          Narzędzie umożliwia wstępną samoocenę gotowości przedsiębiorstwa do
+          Narzędzie umożliwia wstępną ocenę gotowości przedsiębiorstwa do
           wdrożenia rozwiązań sztucznej inteligencji na podstawie wymiarów:
           technologicznego, organizacyjnego, środowiskowego oraz procesowego.
         </p>

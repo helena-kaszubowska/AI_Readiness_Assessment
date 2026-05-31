@@ -1,7 +1,7 @@
 import { useId, useState } from 'react'
 import { ANSWER_OPTIONS } from '../data/questions'
 import type { AnswerValue } from '../types'
-import { IconInfo } from './icons'
+import { IconInfo } from './Icons'
 
 interface QuestionCardProps {
   index: number

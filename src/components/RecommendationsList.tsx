@@ -1,4 +1,4 @@
-import { IconLightbulb } from './icons'
+import { IconLightbulb } from './Icons'
 
 interface RecommendationsListProps {
   items: string[]
