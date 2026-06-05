@@ -69,7 +69,7 @@ export const technologyQuestions: Question[] = [
   {
     id: "T8",
     dimension: "technology",
-    text: "Czy firma stosuje podstawowe mechanizmy ochrony danych, takie jak kontrola dostępu, kopie zapasowe i zabezpieczenia przed nieuprawnionym użyciem?",
+    text: "Czy firma stosuje podstawowe mechanizmy ochrony danych, takie jak kontrola dostępu, tworzenie kopii zapasowych oraz zabezpieczenia ograniczające ryzyko utraty lub nieuprawnionego wykorzystania danych?",
     helpText: helpFor("T8"),
   },
 ];
@@ -129,7 +129,7 @@ export const environmentQuestions: Question[] = [
   {
     id: "E1",
     dimension: "environment",
-    text: "Czy konkurencyjne firmy na rynku wykorzystują lub rozwijają rozwiązania cyfrowe albo AI?",
+    text: "Czy konkurencyjne firmy na rynku wykorzystują lub rozwijają rozwiązania cyfrowe, w tym rozwiązania AI?",
     helpText: helpFor("E1"),
   },
   {
@@ -237,10 +237,32 @@ export const FORM_STEPS = [
 ];
 
 export const COMPANY_SIZE_OPTIONS = [
-  { value: "mikro" as const, label: "Mikro" },
-  { value: "małe" as const, label: "Małe" },
-  { value: "średnie" as const, label: "Średnie" },
-  { value: "duże" as const, label: "Duże" },
+  {
+    value: "mikro" as const,
+    label: "Mikro",
+    employees: "do 9 pracowników",
+    employeesMain: "do 9",
+    employeesSub: "pracowników",
+  },
+  {
+    value: "małe" as const,
+    label: "Małe",
+    employees: "10–49 pracowników",
+    employeesMain: "10–49",
+    employeesSub: "pracowników",
+  },
+  {
+    value: "średnie" as const,
+    label: "Średnie",
+    employees: "50–249 pracowników",
+    employeesMain: "50–249",
+    employeesSub: "pracowników",
+  },
+  {
+    value: "duże" as const,
+    label: "Duże",
+    employees: "250 i więcej pracowników",
+  },
 ];
 
 export const AI_GOAL_OPTIONS = [

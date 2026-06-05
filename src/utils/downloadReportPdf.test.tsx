@@ -40,7 +40,7 @@ describe('downloadReportPdf document', () => {
       />,
     )
     expect(buf.byteLength).toBeGreaterThan(500)
-    const header = String.fromCharCode(...new Uint8Array(buf.slice(0, 5)))
+    const header = String.fromCharCode(...buf.subarray(0, 5))
     expect(header).toBe('%PDF-')
   })
 })

@@ -39,8 +39,8 @@ export function IntroStep({ intro, onChange }: IntroStepProps) {
               onClick={() => onChange({ companySize: opt.value })}
               className={`rounded-lg border px-4 py-2 text-sm font-medium transition ${
                 intro.companySize === opt.value
-                  ? 'chip-selected'
-                  : 'chip-default'
+                  ? "chip-selected"
+                  : "chip-default"
               }`}
             >
               {opt.label}
@@ -74,9 +74,7 @@ export function IntroStep({ intro, onChange }: IntroStepProps) {
                 })
               }
               className={`rounded-lg border px-4 py-2 text-left text-sm font-medium transition ${
-                intro.aiGoal === opt.value
-                  ? 'chip-selected'
-                  : 'chip-default'
+                intro.aiGoal === opt.value ? "chip-selected" : "chip-default"
               }`}
             >
               {opt.label}
@@ -108,9 +106,7 @@ export function IntroStep({ intro, onChange }: IntroStepProps) {
               type="button"
               onClick={() => onChange({ aiUsage: opt.value })}
               className={`rounded-lg border px-4 py-2 text-sm font-medium transition ${
-                intro.aiUsage === opt.value
-                  ? 'chip-selected'
-                  : 'chip-default'
+                intro.aiUsage === opt.value ? "chip-selected" : "chip-default"
               }`}
             >
               {opt.label}
