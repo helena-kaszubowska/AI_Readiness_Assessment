@@ -70,11 +70,6 @@ describe('validateIntro', () => {
 describe('validateQuestions', () => {
   const section = technologyQuestions
 
-  it('returns null when every question in the section is answered', () => {
-    const answers = Object.fromEntries(section.map((q) => [q.id, 1]))
-    expect(validateQuestions(section, answers)).toBeNull()
-  })
-
   it('returns error when at least one answer is missing', () => {
     const answers = Object.fromEntries(
       section.map((q, i) => [q.id, i === 0 ? undefined : 2]),
@@ -88,5 +83,10 @@ describe('validateQuestions', () => {
     expect(validateQuestions(section, {})).toBe(
       'Odpowiedz na wszystkie pytania w tej sekcji, aby przejść dalej.',
     )
+  })
+
+  it('returns null when every question in the section is answered', () => {
+    const answers = Object.fromEntries(section.map((q) => [q.id, 1]))
+    expect(validateQuestions(section, answers)).toBeNull()
   })
 })
